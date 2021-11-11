@@ -1,9 +1,3 @@
-# |
- |
- |
- |
-| --- | --- | --- |
-
 This document describes interfaces that are provided to access different aspects of the Gravity subsystem. These API&#39;s make it easy for a application developers to access various communications and database layers that are contained within the Gravity subsystem.
 
 The interface to the Network Manager subsystems allows applications to access what devices are available on the mesh network as well as the capabilities of those devices to support various functions.
@@ -12,13 +6,15 @@ Interfacing to the Network Manager app on the Android platform, from other exter
 
 Later in this document are some example code that will help to clarify any questions on how to use the Network Manager API&#39;s.
 
-**NetworkManager class**
+> **NetworkManager class**
 
-**class NetworkManager**
+>> **class NetworkManager**
 
 This is the main interface class that apps should use to communicate to the Network Manager. Any application that desires to interface to the Network Manager needs to create an instance of this class for use later.
 
+```
 public static NetworkManager get\_instance()
+```
 
 This method is a factory method to a global instance of the Network Manager class. This method MUST be called before any other methods as it is the only way to receive an instance of the class.
 
